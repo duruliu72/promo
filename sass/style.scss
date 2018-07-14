@@ -3,6 +3,7 @@
     padding: 0px;
 }
 
+$primary_color:#00FDFF;
 .countdown_bg {
     background-image: url("../img/main.jpg");
     background-position: center;
@@ -13,6 +14,9 @@
 .countdown_bgcolor {
     padding-top: 1px;
     padding-bottom: 1px;
+    .logo {
+        text-align: center;
+    }
 }
 
 .container {
@@ -174,38 +178,41 @@
 .landing_email {
     width: 232px;
     margin: 0px auto;
+    .input_box {
+        margin-bottom: 20px;
+        input[type=email] {
+            width: 230px;
+            font-size: 19px;
+            height: 38px;
+            border: 0;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        input[type=button] {
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            width: 147px;
+            border: 0;
+            font-size: 19px;
+            color: #fff;
+            height: 39px;
+            background: $primary_color;
+            margin-left: 0px;
+            cursor: pointer;
+        }
+    }
+    p {
+        text-align: center;
+        color: #fff;
+    }
+
 }
 
-.input_box {
-    margin-bottom: 20px;
-}
 
-input[type=email] {
-    width: 230px;
-    font-size: 19px;
-    height: 38px;
-    border: 0;
-    padding-left: 10px;
-    margin-bottom: 20px;
-}
 
-input[type=button] {
-    box-sizing: border-box;
-    border: 1px solid #fff;
-    width: 147px;
-    border: 0;
-    font-size: 19px;
-    color: #fff;
-    height: 39px;
-    background: #097da7;
-    margin-left: 0px;
-    cursor: pointer;
-}
 
-.landing_email p {
-    text-align: center;
-    color: #fff;
-}
+
+
 
 .landing_social {
     margin-top: 30px;
@@ -215,31 +222,34 @@ input[type=button] {
 @media (min-width:576px) {
     .landing_email {
         width: 513px;
-    }
-    input[type=email] {
-        width: 358px;
-    }
-    input[type=button] {
-        width: 147px;
-    }
-    input[type=email] {
-        margin-bottom: 0px;
-    }
-    input[type=button] {
-        margin-left: -7px;
+        .input_box {
+            input[type=email] {
+                width: 358px;
+                margin-bottom: 0px;
+            }
+            input[type=button] {
+                width: 147px;
+                margin-left: -7px;
+            }
+        }
+
     }
 }
 
 @media (min-width:768px) {
     .landing_email {
         width: 700px;
+        .input_box {
+            input[type=email] {
+                width: 490px;
+            }
+            input[type=button] {
+                width: 198px;
+            }
+        }
+
     }
-    input[type=email] {
-        width: 490px;
-    }
-    input[type=button] {
-        width: 198px;
-    }
+
 }
 
 @media (min-width:992px) {}
@@ -273,7 +283,7 @@ input[type=button] {
 
 .fa-twitter {
     color: #fff;
-    background:#50B6F5; 
+    background: #00FFFF;
 }
 
 .fa-google-plus {
@@ -289,10 +299,11 @@ input[type=button] {
             text-align: center;
             margin-bottom: 25px;
             text-transform: uppercase;
-            color: #3390FF;
+            color: $primary_color;
         }
         p {
             text-align: center;
+            color: #fff;
         }
     }
     padding: 50px 0px;
@@ -311,6 +322,54 @@ input[type=button] {
                 text-align: center;
             }
         }
+    }
+}
+
+//Sign Up Section
+#signup {
+    padding: 50px 0px;
+    .title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            color: $primary_color;
+        }
+    }
+    .input_box {
+        margin-top: 25px;
+        input[type=email] {
+            font-size: 19px;
+            height: 38px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        input[type=text] {
+            font-size: 19px;
+            height: 38px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        input[type=button] {
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            width: 147px;
+            border: 0;
+            font-size: 19px;
+            color: #fff;
+            height: 39px;
+            background: $primary_color;
+            margin-left: 0px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    #signup {
+        .input_box{
+            margin-top: 0px;
+        } 
     }
 }
 
@@ -341,6 +400,9 @@ input[type=button] {
                 color: #fff;
             }
             margin-bottom: 15px;
+            a {
+                background: $primary_color;
+            }
         }
     }
     &:after {
@@ -391,9 +453,16 @@ input[type=button] {
 
 .contact-title h2 {
     text-align: center;
-    color: #3390FF;
+    color: $primary_color;
 }
 
 .contact-details {
     margin-top: 50px;
+    .color {
+        background: $primary_color;
+        border-color: $primary_color;
+        :hover {
+            color: #fff;
+        }
+    }
 }
