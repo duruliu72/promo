@@ -80,25 +80,6 @@ $primary_color:#00FDFF;
     margin-bottom: 20px;
 }
 
-.landing_pbar {
-    width: 271px;
-    margin: auto;
-}
-
-#myProgress {
-    width: 100%;
-    border: 1px solid #fff;
-    border-radius: 3px;
-}
-
-#myBar {
-    width: 81%;
-    height: 25px;
-    background-color: #fff;
-    opacity: 0.5;
-    border-radius: 3px;
-}
-
 .landing_time_counter {
     width: 210px;
     margin: 0 auto;
@@ -141,15 +122,13 @@ $primary_color:#00FDFF;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(45deg);
+    border-radius: 50%;
 }
 
 #days,
 #hours,
 #minutes,
-#seconds {
-    transform: rotate(-45deg);
-}
+#seconds {}
 
 @media (min-width:420px) {
     .landing_pbar {
@@ -293,9 +272,12 @@ $primary_color:#00FDFF;
 
 //Product section
 #product-display {
+    padding: 50px 0px;
+    min-height: 250px;
+    background: #131a1f;
     .title {
         margin-bottom: 50px;
-        h1 {
+        h2 {
             text-align: center;
             margin-bottom: 25px;
             text-transform: uppercase;
@@ -306,8 +288,6 @@ $primary_color:#00FDFF;
             color: #fff;
         }
     }
-    padding: 50px 0px;
-    min-height: 250px;
     .item {
         .img {
             margin-bottom: 10px;
@@ -367,9 +347,9 @@ $primary_color:#00FDFF;
 
 @media (min-width:768px) {
     #signup {
-        .input_box{
+        .input_box {
             margin-top: 0px;
-        } 
+        }
     }
 }
 
